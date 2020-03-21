@@ -1,0 +1,14 @@
+//
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.lazy {
+    filter: drop-shadow(0 5px 5px rgba(32, 32, 34, 0.2));
+}
+
+.blur {
+    filter: blur(5px) brightness(0.8);
+}
