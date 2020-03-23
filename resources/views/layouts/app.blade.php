@@ -1,8 +1,10 @@
 @include('layouts._head')
 
-<body class="font-body">
+<body class="font-body bg-gray-100">
+    @include('layouts._loader')
     @include('layouts._bar')
     <div id="app">
+        @include('layouts._mobile')
         @include('layouts._header')
         <main>
             @yield('content')

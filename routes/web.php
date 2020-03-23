@@ -1,5 +1,7 @@
 <?php
 
+use App\Post;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +18,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index')->name('home');
 
-Auth::routes();
+Auth::routes([
+    'register' => false,
+    'reset' => false,
+    'verify' => false,
+]);
+
+Route::get('/logout', function () {
+    Auth::logout();
+    return redirect('/login');
+});
+
+Route::resources([
+    'posts' => 'PostController',
+]);
 
 Route::get('/admin', 'AdminController@index')->name('admin');

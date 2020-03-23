@@ -54,10 +54,12 @@
 
                 <div class="text-sm leading-5">
                     <!-- Forgot -->
-                    <a href="#"
+                    @if (Route::has('password.request'))
+                    <a href="{{ route('password.request') }}"
                         class="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150">
-                        Forgot your password?
+                        {{ __('Forgot Your Password?') }}
                     </a>
+                    @endif
                 </div>
             </div>
 
@@ -75,11 +77,6 @@
                     </span>
                     {{ __('Login') }}
                 </button>
-                @if (Route::has('password.request'))
-                <a class="btn btn-link" href="{{ route('password.request') }}">
-                    {{ __('Forgot Your Password?') }}
-                </a>
-                @endif
             </div>
         </form>
     </div>

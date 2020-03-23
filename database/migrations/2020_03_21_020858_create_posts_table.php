@@ -13,8 +13,22 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
+        Schema::create('tags', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->longText('svg');
+            $table->string('color');
+            $table->string('link');
+            $table->timestamps();
+        });
+
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('url');
+            $table->string('image');
+            $table->foreignId('tag_id');
+            $table->foreign('tag_id')->references('id')->on('tags');
             $table->timestamps();
         });
     }

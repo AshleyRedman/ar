@@ -1,14 +1,87 @@
 //
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
 
-.lazy {
+.lazy,
+.mobile {
     filter: drop-shadow(0 5px 5px rgba(32, 32, 34, 0.2));
+}
+
+.post-entry {
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #070707;
+        opacity: 0.15;
+        z-index: 0;
+        transition: opacity 300ms ease;
+    }
+
+    &:hover {
+        &::after {
+            opacity: 0;
+            transition: opacity 300ms ease;
+        }
+    }
 }
 
 .blur {
     filter: blur(5px) brightness(0.8);
+}
+
+.after {
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0.5rem;
+        background-color: rgba(#43cccb, 0.35);
+        z-index: -1;
+        opacity: 1;
+    }
+}
+
+.svg {
+    &-light {
+        fill: #f6f6f6;
+    }
+}
+
+.button {
+    @apply transition;
+    @apply duration-150;
+    @apply ease-in-out;
+    @apply font-bold;
+    @apply py-4;
+    @apply px-8;
+    @apply rounded-full;
+    @apply bg-gray-900;
+    @apply text-light;
+    @apply tracking-wide;
+    @apply font-semibold;
+    @apply text-xl;
+    filter: drop-shadow(0 5px 5px rgba(32, 32, 34, 0.2));
+
+    &:hover {
+        @apply bg-gray-800;
+    }
+
+    &-light {
+        @apply text-dark;
+        @apply bg-gray-100;
+
+        &:hover {
+            @apply text-gray-200;
+        }
+    }
 }

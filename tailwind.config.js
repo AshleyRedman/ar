@@ -25,17 +25,19 @@ module.exports = {
                 "sans-serif"
             ]
         },
-        textColor: {
-            dark: "#070707",
-            light: "#f6f6f6"
-        },
-        height: {
-            hero: "640px"
-        },
-        backgroundPosition: {
-            "r-80": "80%"
-        },
-        extend: {}
+        extend: {
+            textColor: {
+                dark: "#070707",
+                light: "#f6f6f6",
+                highlight: "#43CCCB"
+            },
+            height: {
+                hero: "640px"
+            },
+            backgroundPosition: {
+                "r-80": "80%"
+            }
+        }
     },
     variants: {},
     plugins: []
