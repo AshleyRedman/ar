@@ -1,4 +1,10 @@
+<!-- template location - views/post/show.blade.php -->
+
 @extends('layouts.app')
+
+@section('meta_title', $post->title . ' - Ash Redman')
+@section('meta_description', $post->title . ' - ' . $post->url . ' ' . ' - Ash Redman')
+@section('meta_keywords', $tag->name . ' ' . ' - Ash Redman')
 
 @section('content')
 
@@ -10,10 +16,8 @@
     </div>
 </section>
 
-
 <section class="px-8">
     <div class="container mx-auto">
-
         <article class="block mt-8 md:mt-16 mb-16 md:mb-32">
             <div class="block relative">
                 <img src="/ph.png" data-src="{{ $post->image }}" class="w-full h-full lazy blur"
@@ -31,7 +35,6 @@
                 </a>
             </div>
         </article>
-
     </div>
 </section>
 

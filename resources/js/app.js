@@ -41,11 +41,11 @@ function scroller() {
 const nav = document.querySelector(".mobile");
 const burger = document.querySelector(".burger");
 const navItem = document.querySelectorAll(".mobile-item");
-burger.addEventListener("click", e => {
+
+function toggleMenu(e) {
     nav.classList.toggle("translate-x-full");
-});
-navItem.forEach(i => {
-    i.addEventListener("click", function(e) {
-        nav.classList.toggle("translate-x-full");
-    });
-});
+}
+
+burger.addEventListener("click", e => toggleMenu(e));
+
+navItem.forEach(i => i.addEventListener("click", e => toggleMenu(e)));

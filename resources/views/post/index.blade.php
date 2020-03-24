@@ -1,4 +1,9 @@
+<!-- template location - views/post/index.blade.php -->
+
 @extends('layouts.app')
+
+@section('meta_title', 'Portfolio - Ash Redman')
+@section('meta_description', 'A shortlist of my recent work...')
 
 @section('content')
 
@@ -8,7 +13,6 @@
         <p class="text-center text-dark font-normal text-l md:text-xl">A shortlist of my recent work...</p>
     </div>
 </section>
-
 
 <section id="portfolio-entries" class="px-8">
     <div class="container mx-auto mb-16 md:mb-32">

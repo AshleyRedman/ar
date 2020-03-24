@@ -36,7 +36,7 @@
 
     <!--App  -->
     <meta name="author" content="Ash Redman">
-    <meta name="keywords" content="Web Development, WordPress, Laravel">
+    <meta name="keywords" content="@yield('meta_keywords', 'Web Development, WordPress, Laravel')">
     <meta name="description" content="@yield('meta_description', 'UK Based Web Developer | WordPress &amp; Laravel')">
     <title>@yield('meta_title', config('app.name', 'Ash Redman - Developer'))</title>
 
