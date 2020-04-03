@@ -29,8 +29,16 @@ Route::get('/logout', function () {
     return redirect('/login');
 });
 
-Route::resources([
-    'posts' => 'PostController',
-]);
+// Route::resources([
+//     'posts' => 'PostController', []
+// ]);
+
+Route::get('/posts', 'PostController@index')->name('posts.index');
+Route::get('/posts/create', 'PostController@create')->name('posts.create');
+Route::post('/posts/store', 'PostController@store')->name('posts.store');
+Route::get('/posts/{post:slug}', 'PostController@show')->name('posts.show');
+Route::get('/posts/{post:slug}/edit', 'PostController@edit')->name('posts.edit');
+Route::put('/posts/{post:slug}', 'PostController@update')->name('posts.update');
+Route::delete('/posts/{post:slug}', 'PostController@destroy')->name('posts.destroy');
 
 Route::get('/admin', 'AdminController@index')->name('admin');

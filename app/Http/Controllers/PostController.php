@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Tag;
 use App\Post;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Auth;
@@ -35,14 +36,20 @@ class PostController extends Controller
     {
         //
         if (Auth::check()) {
-            $data = $request->validate([
+            $request->validate([
                 'title' => 'required|unique:posts|max:255',
                 'url' => 'required',
                 'image' => 'required',
                 'tag_id' => 'required',
             ]);
 
-            Post::create($data);
+            $post = new Post();
+            $post->title = request()->title;
+            $post->slug = Str::slug(request()->title, '-');
+            $post->url = request()->url;
+            $post->image = request()->image;
+            $post->tag_id = request()->tag_id;
+            $post->save();
 
             return redirect('/admin');
         } else {
@@ -77,6 +84,7 @@ class PostController extends Controller
         //
         if (Auth::check()) {
             $post->title = request('title');
+            $post->slug = Str::slug(request()->title, '-');
             $post->url = request('url');
             $post->image = request('image');
             $post->tag_id = request('tag_id');

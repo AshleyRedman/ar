@@ -12,7 +12,7 @@
         <div class="mt-16">
             @if(count($posts) > 0)
             @foreach($posts as $post)
-            <a href="{{ route('posts.edit', $post->id) }}" class="block my-4">{{ $post->title }}</a>
+            <a href="{{ route('posts.edit', $post->slug) }}" class="block my-4">{{ $post->title }}</a>
             @endforeach
             @else
             <p>No posts</p>

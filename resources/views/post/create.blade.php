@@ -17,6 +17,7 @@
                         <span>Title</span>
                         <input type="text" name="title" class="block my-4 w-1/2 py-2 px-4 rounded border">
                     </label>
+
                     <label for="url">
                         <span>URL</span>
                         <input type="text" name="url" class="block my-4 w-1/2 py-2 px-4 rounded border">

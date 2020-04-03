@@ -20,7 +20,7 @@
         @if(count($posts) > 0)
         @foreach($posts as $post)
         <article class="block mt-8 md:mt-16">
-            <a href="{{ route('posts.show', $post->id) }}" class="post-entry block relative">
+            <a href="{{ route('posts.show', $post->slug) }}" class="post-entry block relative">
                 <img src="/ph.png" data-src="{{ $post->image }}" class="w-full h-full lazy blur"
                     alt="{{ $post->title }}" loading="lazy">
                 <span

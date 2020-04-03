@@ -10,7 +10,7 @@
         </div>
 
         <div class="mt-8">
-            <form method="POST" action="{{ route('posts.update', $post->id) }}">
+            <form method="POST" action="{{ route('posts.update', $post->slug) }}">
                 @csrf
                 @method('PUT')
 
@@ -20,6 +20,7 @@
                         <input type="text" name="title" value="{{ $post->title }}"
                             class="block my-4 w-1/2 py-2 px-4 rounded border">
                     </label>
+
                     <label for="url">
                         <span>URL</span>
                         <input type="text" name="url" value="{{ $post->url }}"
@@ -42,7 +43,7 @@
                 <button type="submit" class="button">Update</button>
             </form>
             <div class="mt-8">
-                <form method="POST" action="{{ route('posts.destroy', $post->id) }}">
+                <form method="POST" action="{{ route('posts.destroy', $post->slug) }}">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="button bg-red-800">Delete</button>
