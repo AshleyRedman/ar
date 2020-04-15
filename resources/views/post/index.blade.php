@@ -14,12 +14,12 @@
     </div>
 </section>
 
-<section id="portfolio-entries" class="px-8">
+<section id="portfolio-entries" class="px-8 mt-8 md:mt-16">
     <div class="container mx-auto mb-16 md:mb-32 grid grid-cols-1 lg:grid-cols-2 gap-4">
 
         @if(count($posts) > 0)
         @foreach($posts as $post)
-        <article class="block mt-8 md:mt-16">
+        <article class="block ">
             <a href="{{ route('posts.show', $post->slug) }}" class="post-entry block relative">
                 <img src="/ph.png" data-src="{{ $post->image }}" class="w-full h-full lazy blur"
                     alt="{{ $post->title }}" loading="lazy">
