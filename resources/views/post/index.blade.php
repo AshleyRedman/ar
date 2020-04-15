@@ -15,7 +15,7 @@
 </section>
 
 <section id="portfolio-entries" class="px-8 mt-8 md:mt-16">
-    <div class="container mx-auto mb-16 md:mb-32 grid grid-cols-1 lg:grid-cols-2 gap-4">
+    <div class="container mx-auto mb-16 md:mb-32 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
 
         @if(count($posts) > 0)
         @foreach($posts as $post)
