@@ -6,7 +6,7 @@
 <section id="home" class="px-8 mb-32">
     <div class="container mx-auto flex justify-between items-center py-16">
         <h1 class="text-6xl font-bold leading-none w-1/3">Ash <br> Redman</h1>
-        <p class="text-gray-300 font-light w-1/3 text-center hidden md:block">
+        <p class="text-gray-800 font-light w-1/3 text-center hidden md:block">
             [
             '<span class="text-dark font-semibold">Web Developer</span>',
             '<span class="text-dark font-semibold">26</span>',
