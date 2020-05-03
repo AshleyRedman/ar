@@ -20,8 +20,9 @@
     <div class="container mx-auto">
         <article class="block mt-8 md:mt-16 mb-16 md:mb-32">
             <div class="block relative">
-                <img src="/ph.png" data-src="{{ $post->image }}" class="w-full h-full lazy blur"
-                    alt="{{ $post->title }}" loading="lazy">
+                <img src="/ph.png"
+                    data-src="https://cloud.ardev.co.uk/ashredman/content/portfolio/jpg/{{ $post->image }}.jpg"
+                    class="w-full h-full lazy blur" alt="{{ $post->title }}" loading="lazy">
                 <a href="{{ $tag->link }}"
                     class="absolute bottom-0 left-0 ml-4 mb-4 text-white py-2 px-2 rounded-full z-20 flex items-center shadow"
                     style="background-color: {{ $tag->color }} ">

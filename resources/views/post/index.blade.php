@@ -21,8 +21,9 @@
         @foreach($posts as $post)
         <article class="block ">
             <a href="{{ route('posts.show', $post->slug) }}" class="post-entry block relative">
-                <img src="/ph.png" data-src="{{ $post->image }}" class="w-full h-full lazy blur"
-                    alt="{{ $post->title }}" loading="lazy">
+                <img src="/ph.png"
+                    data-src="https://cloud.ardev.co.uk/ashredman/content/portfolio/700/{{ $post->image }}-700.jpg"
+                    class="w-full h-full lazy blur" alt="{{ $post->title }}" loading="lazy">
                 <span
                     class="absolute z-10 bottom-0 right-0 bg-gray-900 text-white font-medium tracking-widest py-4 px-4">{{ $post->url }}</span>
             </a>
