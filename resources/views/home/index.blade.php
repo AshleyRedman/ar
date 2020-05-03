@@ -19,8 +19,8 @@
     </div>
 
     <div class="container mx-auto">
-        <div style="background-image: url(https://cloud.ardev.co.uk/ashredman/content/portfolio/hero.jpg);"
-            data-bg="url(https://cloud.ardev.co.uk/ashredman/content/portfolio/hero.jpg)"
+        <div style="background-image: url(https://cloud.ardev.co.uk/ashredman/content/portfolio/hero.webp);"
+            data-bg="url(https://cloud.ardev.co.uk/ashredman/content/portfolio/hero.webp)"
             class="w-full h-hero bg-r-80 sm:bg-center lazy" data-was-processed="true">
         </div>
     </div>
