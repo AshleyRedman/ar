@@ -1,5 +1,3 @@
-require("./bootstrap");
-
 import SmoothScroll from "smooth-scroll";
 import LazyLoad from "vanilla-lazyload";
 

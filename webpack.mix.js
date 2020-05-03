@@ -7,8 +7,6 @@ mix.sass("resources/sass/app.scss", "public/css").options({
 });
 
 mix.js("resources/js/app.js", "public/js").extract([
-    'axios',
-    'lodash',
     'smooth-scroll',
     'vanilla-lazyload'
 ]);
