@@ -4,6 +4,7 @@ import LazyLoad from "vanilla-lazyload";
 const loader = document.querySelector(".loader");
 const tagName = document.querySelector(".tag-name");
 window.addEventListener("DOMContentLoaded", e => {
+
     setTimeout(() => {
         loader.classList.add("opacity-0");
     }, 1000);
